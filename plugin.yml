@@ -1,5 +1,5 @@
 name: ItemChest
-main: Nawaf1b\ItemChest
+main: Nawaf1b\ChestItem
 version: "1.0.2"
 api: [1.9.0]
 load: POSTWORLD
