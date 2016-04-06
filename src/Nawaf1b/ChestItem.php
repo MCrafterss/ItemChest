@@ -14,7 +14,7 @@ use pocketmine\level\sound\PopSound;
 class ChestItem extends PluginBase implements Listener { 
     
     public $toucherschest = 0;
-    private abstract $get = null;
+    private static $get = null;
 
     public function onTouchChest(PlayerInteractEvent $ev){
         
@@ -59,7 +59,7 @@ class ChestItem extends PluginBase implements Listener {
         $this->getLogger()->info("Author ChestItem Plugin : Nawaf_Craft1b");
     }
     
-    public function getInstance(){
+    public static function getInstance(){
     return self::$get;
     }
 }
