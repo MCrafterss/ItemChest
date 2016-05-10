@@ -24,6 +24,7 @@ class ChestItem extends PluginBase implements Listener {
             
             $tile = $ev->getPlayer()->getLevel()->getTile(new Vector3($ev->getBlock()->x,$ev->getBlock()->y,$ev->getBlock()->z));
             $player = $ev->getPlayer();
+            
             foreach ($tile->getInventory()->getContents() as $chest){
                 
                 $player->getInventory()->addItem(Item::get($chest->getId()));
@@ -57,6 +58,7 @@ class ChestItem extends PluginBase implements Listener {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         
         $this->getLogger()->info("Author ChestItem Plugin : Nawaf_Craft1b");
+        
     }
     
     public static function getInstance(){
