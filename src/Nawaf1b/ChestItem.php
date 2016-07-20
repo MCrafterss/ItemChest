@@ -3,6 +3,7 @@
 namespace Nawaf1b;
        
 use pocketmine\item\Item;
+use pocketmine\item\enchantment\Enchantment;
 
 use pocketmine\math\Vector3;
 use pocketmine\plugin\PluginBase;
@@ -26,6 +27,10 @@ class ChestItem extends PluginBase implements Listener {
             $player = $ev->getPlayer();
             
             foreach ($tile->getInventory()->getContents() as $chest){
+                
+                $enchants = $chest->getEnchantments();
+                
+                $chest->addEnchantment($enchants);
                 
                 $player->getInventory()->addItem(Item::get($chest->getId()));
                 
