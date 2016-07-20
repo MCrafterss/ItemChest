@@ -28,7 +28,7 @@ class ChestItem extends PluginBase implements Listener {
             
             foreach ($tile->getInventory()->getContents() as $chest){
                 
-                $enchants = $chest->getEnchantments();
+                $enchants = $chest->getEnchantment();
                 
                 $chest->addEnchantment($enchants);
                 
