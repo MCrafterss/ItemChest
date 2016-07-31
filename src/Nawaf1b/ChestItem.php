@@ -34,7 +34,7 @@ class ChestItem extends PluginBase implements Listener {
      * @return void
      */
     public function resetTouchers(){
-        $this->chestTouchers <= 0 : $this->chestTouchers -= $this->chestTouchers;
+        $this->chestTouchers <= 0 ? : $this->chestTouchers -= $this->chestTouchers;
     }
     /**
      * @return bool
