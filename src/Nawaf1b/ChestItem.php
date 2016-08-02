@@ -52,7 +52,7 @@ class ChestItem extends PluginBase implements Listener {
     }
     public function onLoad(){
         while(!self::$get instanceof $this){
-           self::get = $this; 
+           self::$get = $this; 
         }
     }
     public function onEnable() {
