@@ -26,7 +26,7 @@ class ChestItem extends PluginBase implements Listener {
             }
             $player->getLevel()->setBlock(new Vector3($ev->getBlock()->x,$ev->getBlock()->y,$ev->getBlock()->z), \pocketmine\block\Block::get(0));
             $player->getLevel()->addSound(new PopSound(new Vector3($ev->getBlock()->x,$ev->getBlock()->y,$ev->getBlock()->z)));
-            $player->sendPopup("Players Touch Chest : ".$this->getTouchersChest());
+            $player->sendPopup("Player chest touchers count: ".$this->getChestTouchers());
             ++$this->chestTouchers;
         }
     }
@@ -37,6 +37,7 @@ class ChestItem extends PluginBase implements Listener {
         $this->chestTouchers <= 0 ? : $this->chestTouchers -= $this->chestTouchers;
     }
     /**
+     * @param int $int
      * @return bool
      */
     public function setChestTouchers($int){
@@ -57,7 +58,7 @@ class ChestItem extends PluginBase implements Listener {
     }
     public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->getLogger()->info("Author ChestItem Plugin : Nawaf_Craft1b");
+        $this->getLogger()->info("Plugin author: Nawaf_Craft1b");
     }
     /**
      * @return ChestItem
