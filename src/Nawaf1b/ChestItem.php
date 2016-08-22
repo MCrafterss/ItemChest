@@ -52,7 +52,7 @@ class ChestItem extends PluginBase implements Listener {
         return $this->chestTouchers;
     }
     public function onLoad(){
-        while(!self::$get instanceof $this){
+        if(!self::$get instanceof $this){
            self::$get = $this; 
         }
     }
